@@ -5,15 +5,17 @@ using UnityEngine.UIElements;
 
 public class DeplacementVaisseau : MonoBehaviour
 {
-    //[SerializeField] private float vitesseDeplacement;
     [SerializeField] private float vitesseRotation = 150f;
     [SerializeField] private float vitessePosition = 5f;
-
     
     void Start(){   }
 
-
     void Update()
+    {
+        deplacerVaisseau();
+    }
+
+    private void deplacerVaisseau()
     {
         // Déplacer le Game Objet personnage 
 
@@ -24,20 +26,11 @@ public class DeplacementVaisseau : MonoBehaviour
 
         //Rotation
         float horizontalInput = Input.GetAxis("Horizontal");
-        float rotation = horizontalInput * vitesseRotation * Time.deltaTime;        
+        float rotation = horizontalInput * vitesseRotation * Time.deltaTime;
         transform.Rotate(0, 0, -rotation);
 
         //Message Log
-        Debug.Log("Déplacement du vaisseau !!");
+        //Debug.Log("Déplacement du vaisseau !!");
     }
 
-
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ennemi"))
-        {
-            Debug.Log("Une collision !!!!!");
-            Destroy(collision.gameObject);
-        }
-    }
 }
