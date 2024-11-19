@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class DeplacementVaisseau : MonoBehaviour
+public class DeplacementPlayer : MonoBehaviour
 {
     [SerializeField] private float vitesseRotation = 150f;
     [SerializeField] private float vitessePosition = 5f;
@@ -22,12 +22,12 @@ public class DeplacementVaisseau : MonoBehaviour
         //Position
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 positionMouvement = new Vector3(0, verticalInput, 0) * vitessePosition * Time.deltaTime;
-        transform.Translate(positionMouvement);
+        this.transform.Translate(positionMouvement);
 
         //Rotation
         float horizontalInput = Input.GetAxis("Horizontal");
         float rotation = horizontalInput * vitesseRotation * Time.deltaTime;
-        transform.Rotate(0, 0, -rotation);
+        this.transform.Rotate(0, 0, -rotation);
 
         //Message Log
         //Debug.Log("Déplacement du vaisseau !!");

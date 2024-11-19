@@ -15,7 +15,7 @@ public class ViePlayer : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ennemi"))
+        if (collision.gameObject.CompareTag("Ennemi") || collision.gameObject.CompareTag("ProjectileEnnemi"))
         {
             viePlayer = viePlayer - degatEnnemi;
             Debug.Log("La vie du player est à " + viePlayer);

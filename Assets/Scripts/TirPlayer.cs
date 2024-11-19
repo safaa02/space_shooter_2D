@@ -28,7 +28,7 @@ public class TirPlayer : MonoBehaviour
             {
                 //rb.velocity = Vector2.up * forceProjectile;
                 //rb.AddForce(Vector2.up * forceProjectile);
-                rb.AddForce(transform.up * forceProjectile);
+                rb.AddForce(this.transform.up * forceProjectile);
                 //rb.AddForce(transform.TransformDirection(Vector2.up) * forceProjectile);
                 //rb.AddForce(Vector2.up * forceProjectile, ForceMode2D.Force);
 

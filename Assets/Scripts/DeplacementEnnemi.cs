@@ -23,11 +23,10 @@ public class DeplacementEnnemi : MonoBehaviour
     private void deplacerEnnemi()
     {
         //transform.position = Vector2.MoveTowards(transform.position, pointA, vitesse * Time.deltaTime);
-        transform.position = Vector2.MoveTowards(transform.position, target, vitesse * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(this.transform.position, target, vitesse * Time.deltaTime);
 
-        if (Vector2.Distance(transform.position, target) < 0.01f)
+        if (Vector2.Distance(this.transform.position, target) < 0.01f)
         {
-
             if (target == pointA.transform.position)
             {
                 target = pointB.transform.position;

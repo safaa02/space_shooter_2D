@@ -13,7 +13,7 @@ public class VieEnnemi : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Projectile"))
+        if (collision.gameObject.CompareTag("ProjectilePlayer"))
         {
             vieEnnemi = vieEnnemi - degatPlayer;
             Debug.Log("La vie de l'ennemi est à " + vieEnnemi);
