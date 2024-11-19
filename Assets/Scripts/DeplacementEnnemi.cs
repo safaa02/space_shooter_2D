@@ -4,18 +4,39 @@ using UnityEngine;
 
 public class DeplacementEnnemi : MonoBehaviour
 {
-    [SerializeField] private Vector2 pointA;    
-    [SerializeField] private Vector2 pointB;
-    [SerializeField] private float vitesse;
+    [SerializeField] private GameObject pointA;
+    [SerializeField] private GameObject pointB;
+    [SerializeField] private float vitesse = 2;
+
+    private Vector3 target;
 
     void Start()
     {
-        
+        target = pointA.transform.position;
     }
     
     void Update()
     {
-        //transform.position = Vector2.MoveTowards(transform.position, pointA, vitesse * Time.deltaTime);
-        transform.position = Vector2.MoveTowards(pointB, pointA, vitesse * Time.deltaTime);
+        deplacerEnnemi();
     }
+
+    private void deplacerEnnemi()
+    {
+        //transform.position = Vector2.MoveTowards(transform.position, pointA, vitesse * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target, vitesse * Time.deltaTime);
+
+        if (Vector2.Distance(transform.position, target) < 0.01f)
+        {
+
+            if (target == pointA.transform.position)
+            {
+                target = pointB.transform.position;
+            }
+            else
+            {
+                target = pointA.transform.position;
+            }
+        }
+    }
+
 }
