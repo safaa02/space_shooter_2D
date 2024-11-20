@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4646420132730405423}
   - component: {fileID: -3643532686480425441}
   - component: {fileID: -3661862894853652950}
+  - component: {fileID: 908424032106224471}
   m_Layer: 0
   m_Name: ProjectileBoulePlayer
   m_TagString: ProjectilePlayer
@@ -146,7 +147,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -158,3 +159,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &908424032106224471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066764875425661223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4276e63c40daed340af4df83a30a1854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

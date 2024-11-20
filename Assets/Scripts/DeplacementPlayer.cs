@@ -7,8 +7,8 @@ public class DeplacementPlayer : MonoBehaviour
 {
     [SerializeField] private float vitesseRotation = 150f;
     [SerializeField] private float vitessePosition = 5f;
-    
-    void Start(){   }
+
+    void Start(){  }
 
     void Update()
     {
@@ -17,7 +17,7 @@ public class DeplacementPlayer : MonoBehaviour
 
     private void deplacerVaisseau()
     {
-        // Déplacer le Game Objet personnage 
+        // Déplacer le Game Objet Player 
 
         //Position
         float verticalInput = Input.GetAxis("Vertical");
@@ -28,9 +28,6 @@ public class DeplacementPlayer : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float rotation = horizontalInput * vitesseRotation * Time.deltaTime;
         this.transform.Rotate(0, 0, -rotation);
-
-        //Message Log
-        //Debug.Log("Déplacement du vaisseau !!");
     }
 
 }

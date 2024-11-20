@@ -9,14 +9,19 @@ public class ViePlayer : MonoBehaviour
     [SerializeField] private float viePlayer = 100f;
     [SerializeField] private float degatEnnemi = 25f;
    
-    void Start() {  }
+    void Start(){  }
 
-    void Update() { }
+    void Update(){ }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ennemi") || collision.gameObject.CompareTag("ProjectileEnnemi"))
         {
+            if(collision.gameObject.CompareTag("ProjectileEnnemi"))
+            { 
+                Destroy(collision.gameObject);
+            }
+
             viePlayer = viePlayer - degatEnnemi;
             Debug.Log("La vie du player est à " + viePlayer);
 
@@ -30,4 +35,5 @@ public class ViePlayer : MonoBehaviour
             }
         }
     }
+
 }
