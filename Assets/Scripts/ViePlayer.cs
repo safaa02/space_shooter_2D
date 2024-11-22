@@ -8,6 +8,8 @@ public class ViePlayer : MonoBehaviour
 {
     [SerializeField] private float viePlayer = 100f;
     [SerializeField] private float degatEnnemi = 25f;
+
+    [SerializeField] private string sceneCharger;
    
     void Start(){  }
 
@@ -31,7 +33,7 @@ public class ViePlayer : MonoBehaviour
                 Debug.Log("Le player est détruit !");
 
                 //Recommence la partie
-                SceneManager.LoadScene("SceneMain");
+                SceneManager.LoadScene(sceneCharger);
             }
         }
     }

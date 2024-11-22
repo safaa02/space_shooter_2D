@@ -6,6 +6,7 @@ public class TirEnnemi : MonoBehaviour
 {
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float forceProjectile = 1000f;
+    [SerializeField] private float tempsDeVie = 2f;
 
     void Start()
     {
@@ -36,7 +37,7 @@ public class TirEnnemi : MonoBehaviour
             }
 
             //Détruire le projectile après 2 secondes
-            Destroy(projectile, 2f);
+            Destroy(projectile, tempsDeVie);
         }
     }
 
