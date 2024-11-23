@@ -41,8 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7619979565668256390}
   - component: {fileID: 8313035968745783660}
-  - component: {fileID: 5557410827983301181}
-  - component: {fileID: 536447606268416232}
+  - component: {fileID: 1035344364058363190}
   m_Layer: 0
   m_Name: Ennemi
   m_TagString: Ennemi
@@ -112,7 +111,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22668439, y: 0.33782887}
   m_EdgeRadius: 0
---- !u!114 &5557410827983301181
+--- !u!114 &1035344364058363190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,26 +120,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1887421196615697084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22ac4b095c095b74eb1e0fb2f1a9a6dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vieEnnemi: 100
-  degatPlayer: 50
---- !u!114 &536447606268416232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887421196615697084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3884fd88f27f4c4289028c22e07d4fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d3d30127faa5674d91ab15f063a5639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pointA: {fileID: 419287537513542497}
   pointB: {fileID: 2775142439506920402}
   vitesse: 2
+  prefabProjectile: {fileID: 8203617198231991752, guid: 4393efb772d8ed041ba5a8d69484f2c8, type: 3}
+  positionLancementProjectile: {fileID: 2445263349659110576}
+  forceProjectile: 1000
+  tempsDeVie: 2
+  vieEnnemi: 100
+  degatPlayer: 50
 --- !u!1 &2307113143609325170
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +175,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2200544733185643662}
-  - component: {fileID: 4322688468643237315}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -201,27 +191,12 @@ Transform:
   m_GameObject: {fileID: 2445263349659110576}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.809, z: 0}
+  m_LocalPosition: {x: 0, y: -0.295, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7619979565668256390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4322688468643237315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2445263349659110576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b5359a036093774e819f68c08551095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 8203617198231991752, guid: 4393efb772d8ed041ba5a8d69484f2c8, type: 3}
-  forceProjectile: 1000
-  tempsDeVie: 2
 --- !u!1 &2775142439506920402
 GameObject:
   m_ObjectHideFlags: 0

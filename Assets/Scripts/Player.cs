@@ -6,20 +6,25 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    //Deplacement
+    [Header(" --- Deplacement Player ---")]
+    //
     [SerializeField] private float vitesseRotation = 150f;
     [SerializeField] private float vitessePosition = 5f;
 
-    //Projectile lancement
+    [Header(" --- Projectile lancement ---")]
+    //
     [SerializeField] private GameObject prefabProjectile;
     [SerializeField] private GameObject positionLancementProjectile;
     [SerializeField] private float forceProjectile = 1000f;
     [SerializeField] private float tempsDeVie = 2f;
 
-    //Vie
+    [Header(" --- Vie Player ---")]
+    //
     [SerializeField] private float pointsDeVie= 100f;
     [SerializeField] private float degatParEnnemi = 25f;
-    
+
+    [Header(" --- Scene changement ---")]
+    //
     // ------- TO DO -------
     [SerializeField] private string sceneCharge;
     

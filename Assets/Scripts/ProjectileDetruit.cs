@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class ProjectileDetruit : MonoBehaviour
 {
-
     void Start(){ }
-
-    void Update(){ }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
