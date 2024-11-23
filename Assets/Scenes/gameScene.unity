@@ -122,11 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &294283659 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6902804519496351022, guid: f5334b5ffd7090d469bf37f819794da0, type: 3}
-  m_PrefabInstance: {fileID: 989614389571479855}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &457225624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,18 +1371,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6735615444595243635, guid: f5334b5ffd7090d469bf37f819794da0, type: 3}
-      propertyPath: sceneCharger
-      value: gameScene
+    - target: {fileID: 6526571317752856441, guid: f5334b5ffd7090d469bf37f819794da0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6735615444595243635, guid: f5334b5ffd7090d469bf37f819794da0, type: 3}
-      propertyPath: projectilePos
-      value: 
-      objectReference: {fileID: 294283659}
-    - target: {fileID: 6735615444595243635, guid: f5334b5ffd7090d469bf37f819794da0, type: 3}
-      propertyPath: projectilePrefab
-      value: 
-      objectReference: {fileID: 1066764875425661223, guid: f018c436d4349b348af2e02b9078eb57, type: 3}
     - target: {fileID: 7669293659687893695, guid: f5334b5ffd7090d469bf37f819794da0, type: 3}
       propertyPath: m_Enabled
       value: 0

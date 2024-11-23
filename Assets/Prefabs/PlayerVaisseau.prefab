@@ -93,7 +93,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6860953969709806488}
-  - component: {fileID: 6526571317752856441}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -116,21 +115,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6499627385784866387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6526571317752856441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6902804519496351022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e30f23c0e35bea54d829a8885f632108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1066764875425661223, guid: f018c436d4349b348af2e02b9078eb57, type: 3}
-  forceProjectile: 1000
-  tempsDeVie: 2
 --- !u!1 &9201417446241860355
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,8 +126,6 @@ GameObject:
   - component: {fileID: 6499627385784866387}
   - component: {fileID: 5892221974089306738}
   - component: {fileID: 553577969262855058}
-  - component: {fileID: 2260789026029282751}
-  - component: {fileID: 7669293659687893695}
   - component: {fileID: 6735615444595243635}
   m_Layer: 0
   m_Name: PlayerVaisseau
@@ -241,35 +223,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2260789026029282751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9201417446241860355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37d1d423919343244ba995c873947db1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vitesseRotation: 150
-  vitessePosition: 5
---- !u!114 &7669293659687893695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9201417446241860355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17e61623ed396144dbc474421c603b92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viePlayer: 100
-  degatEnnemi: 25
-  sceneCharger: gameScene
 --- !u!114 &6735615444595243635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,12 +235,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c4a7b1444e5154d9800b36ef7e42dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vitesseRot: 0
-  vitessePos: 0
-  vie: 0
-  degatEnnemi: 0
-  sceneCharger: 
-  projectilePrefab: {fileID: 1066764875425661223, guid: f018c436d4349b348af2e02b9078eb57, type: 3}
+  vitesseRotation: 150
+  vitessePosition: 5
+  prefabProjectile: {fileID: 1066764875425661223, guid: f018c436d4349b348af2e02b9078eb57, type: 3}
+  positionLancementProjectile: {fileID: 6902804519496351022}
   forceProjectile: 1000
   tempsDeVie: 2
-  projectilePos: {fileID: 0}
+  pointsDeVie: 100
+  degatParEnnemi: 25
+  sceneCharge: gameScene
