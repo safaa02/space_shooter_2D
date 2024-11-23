@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 553577969262855058}
   - component: {fileID: 2260789026029282751}
   - component: {fileID: 7669293659687893695}
+  - component: {fileID: 6735615444595243635}
   m_Layer: 0
   m_Name: PlayerVaisseau
   m_TagString: Player
@@ -269,3 +270,24 @@ MonoBehaviour:
   viePlayer: 100
   degatEnnemi: 25
   sceneCharger: gameScene
+--- !u!114 &6735615444595243635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9201417446241860355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c4a7b1444e5154d9800b36ef7e42dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseRot: 0
+  vitessePos: 0
+  vie: 0
+  degatEnnemi: 0
+  sceneCharger: 
+  projectilePrefab: {fileID: 1066764875425661223, guid: f018c436d4349b348af2e02b9078eb57, type: 3}
+  forceProjectile: 1000
+  tempsDeVie: 2
+  projectilePos: {fileID: 0}
