@@ -23,6 +23,8 @@ public class Ennemi : MonoBehaviour
     [SerializeField] private float vieEnnemi = 100f;
     [SerializeField] private float degatPlayer = 50f;
 
+    // Référence au CanvasManager
+    [SerializeField] private MenuManager menuManager;
 
     void Start()
     {
@@ -97,6 +99,10 @@ public class Ennemi : MonoBehaviour
             {
                 Destroy(this.gameObject);
                 Debug.Log("L'ennemi est détruit !");
+
+                // Décrémenter le nombre d'ennemis restants
+                menuManager.DecrementerEnnemi();
+
                 // Détruire le parent de l'ennemi (ce qui détruit aussi pointA et pointB qui sont des enfants du parent)
                 Destroy(transform.parent.gameObject);
             }

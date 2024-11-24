@@ -243,4 +243,4 @@ MonoBehaviour:
   tempsDeVie: 2
   pointsDeVie: 100
   degatParEnnemi: 25
-  sceneCharge: gameScene
+  menuManager: {fileID: 0}

@@ -26,12 +26,17 @@ public class Player : MonoBehaviour
     [Header(" --- Scene changement ---")]
     //
     // ------- TO DO -------
-    [SerializeField] private string sceneCharge;
-    
+    //[SerializeField] private string sceneCharge;
+
+
+    // Référence au CanvasManager
+    [SerializeField] private MenuManager menuManager;
+
 
     void Start()
     {
-
+        // Récupérer la référence à CanvasManager dans la scène
+        //canvasManager = FindObjectOfType<CanvasManager>();
     }
 
     void Update()
@@ -102,7 +107,9 @@ public class Player : MonoBehaviour
                 // ------- TO DO -------
                 //Recommence la partie
                 //SceneManager.LoadScene(sceneCharger);
-                gestionScene();
+                //gestionScene();
+                menuManager.resultatPlayer(false);
+                menuManager.ouvrirMenu(); //ouvrir le menu
             }
         }
     }
@@ -110,7 +117,7 @@ public class Player : MonoBehaviour
     // ------- TO DO -------
     private void gestionScene()
     {
-        SceneManager.LoadScene(sceneCharge);
+        //SceneManager.LoadScene(sceneCharge);
     }
 
 }
