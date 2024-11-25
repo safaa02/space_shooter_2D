@@ -100,7 +100,7 @@ public class Ennemi : MonoBehaviour
                 Destroy(this.gameObject);
                 Debug.Log("L'ennemi est détruit !");
 
-                // Décrémenter le nombre d'ennemis restants
+                // Décrémenter le nombre d'ennemis restants pour ouvrir le menu quand il n'y en a plus
                 menuManager.DecrementerEnnemi();
 
                 // Détruire le parent de l'ennemi (ce qui détruit aussi pointA et pointB qui sont des enfants du parent)

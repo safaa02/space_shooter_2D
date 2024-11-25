@@ -104,20 +104,11 @@ public class Player : MonoBehaviour
                 Destroy(this.gameObject);
                 Debug.Log("Le player est détruit !");
 
-                // ------- TO DO -------
-                //Recommence la partie
-                //SceneManager.LoadScene(sceneCharger);
-                //gestionScene();
+                //Ouvre le Menu
                 menuManager.resultatPlayer(false);
-                menuManager.ouvrirMenu(); //ouvrir le menu
             }
         }
     }
 
-    // ------- TO DO -------
-    private void gestionScene()
-    {
-        //SceneManager.LoadScene(sceneCharge);
-    }
 
 }

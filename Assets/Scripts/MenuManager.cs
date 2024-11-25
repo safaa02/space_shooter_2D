@@ -31,8 +31,8 @@ public class MenuManager : MonoBehaviour
         // Si tous les ennemis ont été détruits
         if (ennemisRestants <= 0)
         {
+            //Ouvre le Menu
             resultatPlayer(true);
-            ouvrirMenu();
         }
     }
 
@@ -40,15 +40,18 @@ public class MenuManager : MonoBehaviour
     {
         menu.SetActive(true);
     }
+
     public void resultatPlayer(bool resultat)
     {
         if (resultat)
         {
             texteResultat.text = "Gagné";
+            ouvrirMenu();
         }
         else
         {
             texteResultat.text = "Défaite";
+            ouvrirMenu();
         }
     }
 
