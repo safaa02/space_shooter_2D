@@ -14,6 +14,9 @@ public class MenuManager : MonoBehaviour
     private int totalEnnemis;
     private int ennemisRestants;
 
+    //Vie
+    [SerializeField] public Image[] coeurs;
+
 
     void Start()
     {
@@ -58,6 +61,26 @@ public class MenuManager : MonoBehaviour
     public void OuvrirScene()
     {
         SceneManager.LoadScene(nomScene);
+    }
+
+    public void AffichageVie(float pointsVie)
+    {
+        if (pointsVie <= 75)
+        {
+            coeurs[0].gameObject.SetActive(false);
+        }
+        if (pointsVie <= 50)
+        {
+            coeurs[1].gameObject.SetActive(false);
+        }
+        if (pointsVie <= 25)
+        {
+            coeurs[2].gameObject.SetActive(false);
+        }
+        if (pointsVie <= 0)
+        {
+            coeurs[3].gameObject.SetActive(false);
+        }
     }
 
 }

@@ -98,6 +98,8 @@ public class Player : MonoBehaviour
 
             pointsDeVie= pointsDeVie- degatParEnnemi;
             Debug.Log("La vie du player est à " + pointsDeVie);
+            //Retire l'affichage d'une vie
+            menuManager.AffichageVie(pointsDeVie);
 
             if (pointsDeVie<= 0)
             {
