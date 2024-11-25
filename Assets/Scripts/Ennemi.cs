@@ -23,7 +23,8 @@ public class Ennemi : MonoBehaviour
     [SerializeField] private float vieEnnemi = 100f;
     [SerializeField] private float degatPlayer = 50f;
 
-    // Référence au CanvasManager
+    [Header(" --- Gestion du Menu ---")]
+    //
     [SerializeField] private MenuManager menuManager;
 
     void Start()
@@ -108,5 +109,6 @@ public class Ennemi : MonoBehaviour
             }
         }
     }
+
 
 }

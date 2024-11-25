@@ -6,15 +6,22 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private string nomScene;
+    [Header(" --- Menu UI ---")]
+    //
     [SerializeField] private GameObject menu;
     [SerializeField] private Text texteResultat;
 
+    [Header(" --- Scene ---")]
+    //
+    [SerializeField] private string nomScene;
+
+    [Header(" --- Ennemis ---")]
     // Compteur des ennemis
     private int totalEnnemis;
     private int ennemisRestants;
 
-    //Vie
+    [Header(" --- Vie ---")]
+    //
     [SerializeField] public Image[] coeurs;
 
 
@@ -82,5 +89,6 @@ public class MenuManager : MonoBehaviour
             coeurs[3].gameObject.SetActive(false);
         }
     }
+
 
 }

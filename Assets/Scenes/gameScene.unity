@@ -583,9 +583,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ae9f33be33aa74a8469c8666bd0480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomScene: gameScene
   menu: {fileID: 491509401}
   texteResultat: {fileID: 192941540}
+  nomScene: gameScene
   coeurs:
   - {fileID: 1277014513}
   - {fileID: 806635981}
@@ -1580,7 +1580,7 @@ GameObject:
   - component: {fileID: 1648543159}
   - component: {fileID: 1648543158}
   m_Layer: 5
-  m_Name: Vie4
+  m_Name: Coeur4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

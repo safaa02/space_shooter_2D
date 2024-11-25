@@ -23,21 +23,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float pointsDeVie= 100f;
     [SerializeField] private float degatParEnnemi = 25f;
 
-    [Header(" --- Scene changement ---")]
+    [Header(" --- Gestion du Menu ---")]
     //
-    // ------- TO DO -------
-    //[SerializeField] private string sceneCharge;
-
-
-    // Référence au CanvasManager
     [SerializeField] private MenuManager menuManager;
 
 
-    void Start()
-    {
-        // Récupérer la référence à CanvasManager dans la scène
-        //canvasManager = FindObjectOfType<CanvasManager>();
-    }
+    void Start(){}
 
     void Update()
     {
@@ -97,7 +88,7 @@ public class Player : MonoBehaviour
             }
 
             pointsDeVie= pointsDeVie- degatParEnnemi;
-            Debug.Log("La vie du player est à " + pointsDeVie);
+
             //Retire l'affichage d'une vie
             menuManager.AffichageVie(pointsDeVie);
 
