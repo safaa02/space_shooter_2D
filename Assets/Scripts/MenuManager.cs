@@ -27,6 +27,8 @@ public class MenuManager : MonoBehaviour
 
     void Start()
     {
+        ReprendreLeJeu();
+
         menu.SetActive(false);
 
         // Trouve les ennemis et compte-les
@@ -57,11 +59,13 @@ public class MenuManager : MonoBehaviour
         {
             texteResultat.text = "Gagné";
             ouvrirMenu();
+            EnPause();
         }
         else
         {
             texteResultat.text = "Défaite";
             ouvrirMenu();
+            EnPause();
         }
     }
 
@@ -88,6 +92,18 @@ public class MenuManager : MonoBehaviour
         {
             coeurs[3].gameObject.SetActive(false);
         }
+    }
+
+    private void EnPause()
+    {
+        // Pause le jeu 
+        Time.timeScale = 0;
+    }
+
+    public void ReprendreLeJeu()
+    {
+        // Reprend le jeu
+        Time.timeScale = 1;
     }
 
 
