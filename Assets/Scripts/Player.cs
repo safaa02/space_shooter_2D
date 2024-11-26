@@ -28,21 +28,20 @@ public class Player : MonoBehaviour
     [SerializeField] private MenuManager menuManager;
 
 
-    void Start(){}
 
     void Update()
     {
-        deplacement();
-        lancerProjectile();
+        Deplacement();
+        LancerProjectile();
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        gestionVie(collision);
+        GestionVie(collision);
     }
 
 
-    private void deplacement()
+    private void Deplacement()
     {
         //Position
         float verticalInput = Input.GetAxis("Vertical");
@@ -55,7 +54,7 @@ public class Player : MonoBehaviour
         this.transform.Rotate(0, 0, -rotation);
     }
 
-    private void lancerProjectile()
+    private void LancerProjectile()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -78,7 +77,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void gestionVie(Collision2D collision)
+    private void GestionVie(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ennemi") || collision.gameObject.CompareTag("ProjectileEnnemi"))
         {
@@ -98,7 +97,7 @@ public class Player : MonoBehaviour
                 Debug.Log("Le player est détruit !");
 
                 //Ouvre le Menu
-                menuManager.resultatPlayer(false);
+                menuManager.ResultatPlayer(false);
             }
         }
     }

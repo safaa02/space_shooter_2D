@@ -22,6 +22,8 @@ public class Ennemi : MonoBehaviour
     //
     [SerializeField] private float vieEnnemi = 100f;
     [SerializeField] private float degatPlayer = 50f;
+    //
+    [SerializeField] public GameObject[] coeurs;
 
     [Header(" --- Gestion du Menu ---")]
     //
@@ -35,16 +37,16 @@ public class Ennemi : MonoBehaviour
 
     void Update()
     {
-        deplacerEnnemi();
+        DeplacerEnnemi();
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        gestionVie(collision);
+        GestionVie(collision);
     }
 
-
-    private void deplacerEnnemi()
+                                  
+    private void DeplacerEnnemi()
     {
         transform.position = Vector2.MoveTowards(this.transform.position, target, vitesse * Time.deltaTime);
 
@@ -87,7 +89,7 @@ public class Ennemi : MonoBehaviour
         }
     }
 
-    private void gestionVie(Collision2D collision)
+    private void GestionVie(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ProjectilePlayer"))
         {
@@ -95,6 +97,9 @@ public class Ennemi : MonoBehaviour
 
             vieEnnemi = vieEnnemi - degatPlayer;
             Debug.Log("La vie de l'ennemi est à " + vieEnnemi);
+
+            //Coeur de l'ennemi
+            AffichageVie(vieEnnemi);
 
             if (vieEnnemi <= 0)
             {
@@ -110,5 +115,15 @@ public class Ennemi : MonoBehaviour
         }
     }
 
-
+    public void AffichageVie(float pointsVie)
+    {
+        if (pointsVie <= 50)
+        {
+            coeurs[0].gameObject.SetActive(false);
+        }
+        if (pointsVie <= 0)
+        {
+            coeurs[1].gameObject.SetActive(false);
+        }
+    }
 }

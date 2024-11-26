@@ -36,6 +36,14 @@ public class MenuManager : MonoBehaviour
         ennemisRestants = totalEnnemis;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            QuitterJeu();
+        }
+    }
+
     public void DecrementerEnnemi()
     {
         ennemisRestants--;
@@ -44,27 +52,27 @@ public class MenuManager : MonoBehaviour
         if (ennemisRestants <= 0)
         {
             //Ouvre le Menu
-            resultatPlayer(true);
+            ResultatPlayer(true);
         }
     }
 
-    public void ouvrirMenu()
+    public void OuvrirMenu()
     {
         menu.SetActive(true);
     }
 
-    public void resultatPlayer(bool resultat)
+    public void ResultatPlayer(bool resultat)
     {
         if (resultat)
         {
             texteResultat.text = "Gagné";
-            ouvrirMenu();
+            OuvrirMenu();
             EnPause();
         }
         else
         {
             texteResultat.text = "Défaite";
-            ouvrirMenu();
+            OuvrirMenu();
             EnPause();
         }
     }
@@ -106,5 +114,9 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-
+    public void QuitterJeu()
+    {
+        Application.Quit();
+        Debug.Log("Quitter jeu");
+    }
 }
