@@ -95,8 +95,9 @@ public class Ennemi : MonoBehaviour
         {
             Destroy(collision.gameObject);
 
+            //calcul vie
             vieEnnemi = vieEnnemi - degatPlayer;
-            Debug.Log("La vie de l'ennemi est à " + vieEnnemi);
+            //Debug.Log("La vie de l'ennemi est à " + vieEnnemi);
 
             //Coeur de l'ennemi
             AffichageVie(vieEnnemi);
@@ -104,7 +105,7 @@ public class Ennemi : MonoBehaviour
             if (vieEnnemi <= 0)
             {
                 Destroy(this.gameObject);
-                Debug.Log("L'ennemi est détruit !");
+                //Debug.Log("L'ennemi est détruit !");
 
                 // Décrémenter le nombre d'ennemis restants pour ouvrir le menu quand il n'y en a plus
                 menuManager.DecrementerEnnemi();

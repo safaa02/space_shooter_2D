@@ -86,6 +86,7 @@ public class Player : MonoBehaviour
                 Destroy(collision.gameObject);
             }
 
+            //Calcul vie
             pointsDeVie= pointsDeVie- degatParEnnemi;
 
             //Retire l'affichage d'une vie
@@ -94,7 +95,7 @@ public class Player : MonoBehaviour
             if (pointsDeVie<= 0)
             {
                 Destroy(this.gameObject);
-                Debug.Log("Le player est détruit !");
+                //Debug.Log("Le player est détruit !");
 
                 //Ouvre le Menu
                 menuManager.ResultatPlayer(false);
