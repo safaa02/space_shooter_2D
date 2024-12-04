@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Ennemi">
+    <Position X="4.75" Y="1.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAwQAAGAAGAAFAAAIIAAAAEAAABAAKQAAAAgAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Ennemi.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="menuManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MenuManager">
+    <Position X="9" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AgQCAAAhACBBCAAAAAAAAAkAAAAAACAAAEAARAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\MenuManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player">
+    <Position X="1.25" Y="1.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>CAQQAAEAQAAEBAAAAAAAAgAAAABAAIAQAAAgAQAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="menuManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectileDestruction">
+    <Position X="11.75" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ProjectileDestruction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
